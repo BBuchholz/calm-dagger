@@ -2,6 +2,7 @@ import {
   Button, 
   NavigationView, 
   Page, 
+  Stack,
   contentView
 } from 'tabris';
 
@@ -28,10 +29,12 @@ function openMyriadMdrlPage() {
 contentView.append(
   <NavigationView stretch>
     <Page title='Main Page'>
-      <Button center onSelect={
-        () => openMyriadMdrlPage()}>Open MyriadMdrl page</Button>
-      <Button center top={prev() 16} onSelect={
-        () => openNewsPage()}>Open news page</Button>
+      <Stack alignment='center' padding={4} spacing={24} >
+        <Button center onSelect={
+          () => openMyriadMdrlPage()}>Open MyriadMdrl page</Button>
+        <Button center onSelect={
+          () => openNewsPage()}>Open news page</Button>
+      </Stack>  
     </Page>
   </NavigationView>
 );
