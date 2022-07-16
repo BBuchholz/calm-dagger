@@ -1,5 +1,6 @@
 import {
-  Button, 
+  Button,
+  TextView, 
   NavigationView, 
   Page, 
   Stack,
@@ -30,10 +31,26 @@ contentView.append(
   <NavigationView stretch>
     <Page title='Main Page'>
       <Stack alignment='center' padding={4} spacing={24} >
-        <Button center onSelect={
-          () => openMyriadMdrlPage()}>Open MyriadMdrl page</Button>
-        <Button center onSelect={
+        
+        <Button onSelect={
+          () => openMyriadMdrlPage()}>Myriad MarkDown Report Log</Button>
+        
+        <Button onSelect={
           () => openNewsPage()}>Open news page</Button>
+
+
+        <TextView>
+          create a report with all of the other items
+        </TextView>
+  
+        <TextView>
+          offer option to export to MD file called MyriaD MD RL (MyriaD Markdown Report Log)
+        </TextView>
+  
+        <TextView>
+          offer option to parse the MD RL from a MD folder
+        </TextView>
+
       </Stack>  
     </Page>
   </NavigationView>
