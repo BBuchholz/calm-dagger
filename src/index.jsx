@@ -9,6 +9,7 @@ import {
 
 import { NewsPage } from './pages/NewsPage';
 import { MyriadMdrlPage } from './pages/MyriadMdrlPage';
+import { FileExamplePage } from './pages/FileExamplePage';
 
 function openNewsPage() {
   
@@ -26,6 +27,13 @@ function openMyriadMdrlPage() {
 
 }
 
+function openFileExamplePage() {
+
+  $(NavigationView).only().append(
+    <FileExamplePage />
+  );  
+}
+
 // Create a full-size navigation view and add a page to it
 contentView.append(
   <NavigationView stretch>
@@ -37,6 +45,9 @@ contentView.append(
         
         <Button onSelect={
           () => openNewsPage()}>Open news page</Button>
+
+        <Button onSelect={
+          () => openFileExamplePage()}>File Example From Docs</Button>
 
 
         <TextView>

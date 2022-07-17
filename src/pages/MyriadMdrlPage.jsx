@@ -6,6 +6,10 @@ import {
 
 export class MyriadMdrlPage extends Page {
 
+  getFilePath() {
+    return 'file path goes here'
+  }
+
   constructor(properties) {
     
     super();
@@ -13,25 +17,28 @@ export class MyriadMdrlPage extends Page {
     this.set({title: 'Myriad MD Report Log', ...properties}).append(
       <Stack alignment='center' padding={4} spacing={24} >
         
-  
         <TextView>
-          total files
+          MarkDown File Path: {this.getFilePath()}
         </TextView>
   
         <TextView>
-          total files size
+          total files:
         </TextView>
   
         <TextView>
-          tag count
+          markdown files:
         </TextView>
   
         <TextView>
-          markdown files
+          non markdown files:
+        </TextView>
+
+        <TextView>
+          total files size:
         </TextView>
   
         <TextView>
-          non markdown files
+          tag count:
         </TextView>
 
       </Stack>
